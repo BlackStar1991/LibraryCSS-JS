@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>jQuery uCompare plugin</title>
+        <meta name="description" content="The jQuery uCompare is a jQuery plugin written by Marius Stanciu - Sergiu for Userdot, a plugin which gives you the ability to compare two images (before and after, etc) via a nice interface." />
+        <meta name="keywords" content="jquery, compare, before after, zoom, enhance, userdot" />
+        <link rel="stylesheet" media="screen" href="css/documentation.css" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.ucompare.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.ucompare.css" />
+        <style type="text/css">
+            .sample1 {width:319px; height:433px;}
+            .sample2 {width:319px; height:364px;}
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <div class="container_6 clearfix">
+                    <h1 class="grid_6"><a href="">jQuery uCompare plugin</a> <span class="supersmall">by <a href="http://www.userdot.net">UserDot</a></span></h1>
+                </div>
+            </header>
+            <section>
+                <div class="container_6 clearfix">
+                    <section class="main-section grid_6">
+                        <div class="main-content">
+                            <header>
+                                <h2>Documentation</h2>
+                            </header>
+                            <section class="clearfix">
+                                <div>
+                                    <img class="fr" alt="Logo" src="images/logo.png" />
+                                    <h3>Overview</h3>
+                                    <hr />
+                                    <p>The jQuery uCompare is a <a href="http://www.jquery.com">jQuery</a> plugin written by Marius Stanciu - Sergiu for <a href="http://www.userdot.net">Userdot</a>, a plugin which gives you the ability to compare two images (before and after, etc) via a nice interface.</p>
+                                    <h3>Download</h3>
+                                    <hr />
+                                    <p>You can download the <a href="http://www.userdot.net/files/jquery/jquery.ucompare-1.0.0.zip">last version of the plugin</a>, or <a href="http://www.userdot.net/files/jquery/">browse the archive</a> for older versions.</p>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                </div>
+                <div class="container_6 clearfix">
+                    <section class="main-section grid_6">
+                        <div class="main-content">
+                            <header>
+                                <h2>Usage</h2>
+                            </header>
+                            <section class="clearfix">
+                                <div>
+                                    <p>First you need to include the jQuery library, since uCompare is a plugin. You can download it from the <a href="http://www.jquery.com">jQuery website</a> or link it directly from the Google CDN.</p>
+                                    <code>
+                                        &lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"&gt;&lt;/script&gt;
+                                    </code>
+                                    <p>Secondly, you need to include the jQuery uCompare javascript and the css file into your page. You can do it by adding the code below to your page.</p>
+                                    <code>
+                                        &lt;script type="text/javascript" src="js/jquery.ucompare.js"&gt;&lt;/script&gt;<br />
+                                        &lt;link rel="stylesheet" type="text/css" href="css/jquery.ucompare.css" /&gt;
+                                    </code>
+                                    <p>Next, you implement the actual image(s) that will be processed by the plugin. The structure is as simple as it can get.</p>
+                                    <code>
+                                        &lt;div class="sample1"&gt;<br />
+                                        &lt;img alt="Your before caption" src="your-image1.jpg" /&gt;<br />
+                                        &lt;img alt="Your after caption" src="your-image2.jpg" /&gt;<br />
+                                        &lt;/div&gt;
+                                    </code>
+                                    <p>As the last step, you trigger the uCompare function on the element you just created. In this case, we trigger the function on the div with the id <em>sample1</em>.</p>
+                                    <code>
+                                        &lt;script type="text/javascript"&gt;<br />
+                                        $(document).ready(function(){<br />
+                                        &nbsp;&nbsp;&nbsp;$('.sample1').ucompare({<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultgap:50, <br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;leftgap:0, <br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rightgap:10, <br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;caption: true, <br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reveal: 0.5<br />
+                                        &nbsp;&nbsp;&nbsp;});<br />
+                                        });<br />
+                                        &lt;/script&gt;
+                                    </code>
+                                    <h3>Options</h3>
+                                    <hr />
+                                    <p><mark>caption</mark> - toggle the showing of image caption. Options can be: true/false</p>
+                                    <p><mark>leftgap</mark> - the gap to the left of the image</p>
+                                    <p><mark>rightgap</mark> - the gap to the right of the image</p>
+                                    <p><mark>defaultgap</mark> - the default gap shown before any interactions</p>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                </div>
+                <div class="container_6 clearfix">
+                    <section class="main-section grid_6">
+                        <div class="main-content">
+                            <header>
+                                <h2>Demo</h2>
+                            </header>
+                            <section class="clearfix">
+                                <div>
+                                    <div class="container" style="position:relative">
+                                        <div class="sample1">
+                                            <img src="images/demo/image1.jpg" width="319" height="433" alt="Before" />
+                                            <img src="images/demo/image2.jpg" width="319" height="433" alt="After. Amazing, heh?!" />		
+                                        </div>
+                                        <p><em>Showing a caption for both of the states.</em></p>
+                                    </div>
+                                    <div class="container" style="position:relative">
+                                        <div class="sample2">
+                                            <img src="images/demo/image4.jpg" width="319" height="364" alt="Before" />
+                                            <img src="images/demo/image3.jpg" width="319" height="364" alt="After. Amazing, heh?!" />		
+                                        </div>
+                                        <p><em>Showing no caption.</em></p>
+                                    </div>
+                                    <script type="text/javascript">
+                                        $(document).ready(function()
+                                        {
+                                            $('.sample1').ucompare({
+                                                defaultgap:50, 
+                                                leftgap:0, 
+                                                rightgap:10, 
+                                                caption: true, 
+                                                reveal: 0.5
+                                            });
+                                            $('.sample2').ucompare({
+                                                defaultgap:100, 
+                                                leftgap:0, 
+                                                rightgap:0, 
+                                                caption: false, 
+                                                reveal: 0.5
+                                            });
+                                        });
+                                    </script>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-17350501-3']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </body>
+</html>
